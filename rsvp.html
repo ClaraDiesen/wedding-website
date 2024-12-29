@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
+    <title>Wedding Invite</title>
+
+</head>
+<body>
+
+    <!-- ===================NAVBAR=================== -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">C&P</label>
+        <ul class="text">
+            <li><a href="#timeline" onclick="myFunction()">TAGESABLAUF</a></li>
+            <!-- <li><a href="#story" onclick="myFunction()">UNSERE GESCHICHTE</a></li> -->
+            <li><a href="#registry" onclick="myFunction()">ANREISE</a></li>
+            <li><a href="#stay" onclick="myFunction()">UNTERKUNFT</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+    <div id="rsvp-page-container" class="rsvp-container">
+        <div id="form-section">
+            <h2>Persönliche Angaben hinzufügen</h2>
+            <form id="personal-info-form">
+                <label for="firstname">Vorname</label>
+                <input type="text" id="firstname" name="firstname" required>
+                
+    
+                <label for="lastname">Nachname</label>
+                <input type="text" id="lastname" name="lastname" required>
+                
+            <!-- 
+                <label for="email">*E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" required>
+            -->    
+
+                <label for="attendance">Wirst du teilnehmen?</label>
+                <div id="attendance">
+                    <div>
+                        <input type="radio" id="attend-yes" name="attendance" value="yes" required>
+                        <label for="attend-yes">Ja</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="attend-no" name="attendance" value="no" required>
+                        <label for="attend-no">Nein</label>
+                    </div>
+                </div>
+
+                <label for="guest-count">Anzahl der Gäste</label>
+                <select id="guest-count" name="guest-count" required>
+                    <option value="" disabled selected>Wählen Sie die Anzahl</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+               
+        
+                <div id="additional-guests-container"></div>
+
+
+    
+                <button class="huge-btn" type="submit">ABSENDEN</button>
+            </form>
+        </div>
+        <div id="confirmation-section">
+            <h3>Wir freuen uns auf euch!</h3>
+            <p>24. Mai 2025, 14:30<br>Steyr</p>
+        </div>
+    </div>
+    
+    
+
+
+
+
+    <!-- ===================FOOTER=================== -->
+    <footer>
+        <!--<h2>Kontakt</h2>
+        <h2>Clara: 123-456-7890</h2>
+        <h2>Phillip: 123-456-7890</h2>-->
+        <div class="text"></div>Made with &#10084;
+        <br>© 2025 by Clara Diesenreiter</div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>
