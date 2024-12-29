@@ -1,6 +1,6 @@
 # Wedding website
 
-https://github.com/archakNath/wedding-invitation-website?tab=readme-ov-file
+Adapted [archakNath's project](https://github.com/archakNath/wedding-invitation-website?tab=readme-ov-file).
 
 ## How to install and view this project
 
