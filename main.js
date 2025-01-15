@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (guestCount > 1) {
           for (let i = 2; i <= guestCount; i++) {
-              const label = document.createElement('label');
+              /*const label = document.createElement('label');
               label.textContent = `*Name des Gasts ${i}`;
               label.setAttribute('for', `guest-name-${i}`);
 
@@ -79,7 +79,87 @@ document.addEventListener('DOMContentLoaded', () => {
               additionalGuestsContainer.appendChild(label);
               additionalGuestsContainer.appendChild(input);
               additionalGuestsContainer.appendChild(error);
-          }
+          */
+
+              /*
+            // Create a container for each guest's inputs
+            const guestDiv = document.createElement('div');
+            guestDiv.className = 'guest-container';
+
+            // Create Vorname Label and Input
+            const vornameLabel = document.createElement('label');
+            vornameLabel.textContent = `*Vorname des Gasts ${i}`;
+            vornameLabel.setAttribute('for', `guest-vorname-${i}`);
+
+            const vornameInput = document.createElement('input');
+            vornameInput.type = 'text';
+            vornameInput.id = `guest-vorname-${i}`;
+            vornameInput.name = `guest-vorname-${i}`;
+            vornameInput.required = true;
+
+            // Create Nachname Label and Input
+            const nachnameLabel = document.createElement('label');
+            nachnameLabel.textContent = `*Nachname des Gasts ${i}`;
+            nachnameLabel.setAttribute('for', `guest-nachname-${i}`);
+
+            const nachnameInput = document.createElement('input');
+            nachnameInput.type = 'text';
+            nachnameInput.id = `guest-nachname-${i}`;
+            nachnameInput.name = `guest-nachname-${i}`;
+            nachnameInput.required = true;
+
+            // Append both Vorname and Nachname fields to the container
+            guestDiv.appendChild(vornameLabel);
+            guestDiv.appendChild(vornameInput);
+            guestDiv.appendChild(nachnameLabel);
+            guestDiv.appendChild(nachnameInput);
+
+            // Append the container to the additionalGuestsContainer
+            additionalGuestsContainer.appendChild(guestDiv);
+            */
+
+            // Create a container for each guest's inputs
+            const guestDiv = document.createElement('div');
+            guestDiv.className = 'guest-container';
+
+            // Create Vorname Label and Input
+            const vornameDiv = document.createElement('div');
+            const vornameLabel = document.createElement('label');
+            vornameLabel.textContent = `Vorname des ${i}. Gasts`;
+            vornameLabel.setAttribute('for', `guest-vorname-${i}`);
+
+            const vornameInput = document.createElement('input');
+            vornameInput.type = 'text';
+            vornameInput.id = `guest-vorname-${i}`;
+            vornameInput.name = `guest-vorname-${i}`;
+            vornameInput.required = true;
+
+            vornameDiv.appendChild(vornameLabel);
+            vornameDiv.appendChild(vornameInput);
+
+            // Create Nachname Label and Input
+            const nachnameDiv = document.createElement('div');
+            const nachnameLabel = document.createElement('label');
+            nachnameLabel.textContent = `Nachname des ${i}. Gasts`;
+            nachnameLabel.setAttribute('for', `guest-nachname-${i}`);
+
+            const nachnameInput = document.createElement('input');
+            nachnameInput.type = 'text';
+            nachnameInput.id = `guest-nachname-${i}`;
+            nachnameInput.name = `guest-nachname-${i}`;
+            nachnameInput.required = true;
+
+            nachnameDiv.appendChild(nachnameLabel);
+            nachnameDiv.appendChild(nachnameInput);
+
+            // Append Vorname and Nachname Divs to the Guest Container
+            guestDiv.appendChild(vornameDiv);
+            guestDiv.appendChild(nachnameDiv);
+
+            // Append the guest container to the additionalGuestsContainer
+            additionalGuestsContainer.appendChild(guestDiv);
+         
+            }
       }
   });
 

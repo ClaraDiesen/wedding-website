@@ -651,5 +651,46 @@ form select#guest-count:focus {
     cursor: pointer;
 }
 
+.guest-container {
+    display: flex; /* Use Flexbox to align items in a row */
+    gap: 20px; /* Add spacing between Vorname and Nachname */
+    margin-bottom: 20px; /* Add spacing between guest rows */
+    justify-content: space-between; /* Ensure equal spacing */
+}
+
+.guest-container div {
+    flex: 1; /* Make each label-input pair take up equal space */
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+}
+
+.guest-container label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    /*font-weight: bold;  Ensure consistency with other labels */
+    margin-bottom: 5px; /* Add spacing between label and input */
+    display: block;
+    text-align: left;
+}
+
+.guest-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ensure input takes full width of its container */
+}
+
+@media (max-width: 768px) {
+    .guest-container {
+        flex-wrap: wrap; /* Stack items vertically on smaller screens */
+    }
+    .guest-container div {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+
 
 
